@@ -1,0 +1,14 @@
+<h1>사용자가 입력한 데이터 :</h1>
+
+<% if (@box == "멋쟁이 사자처럼") %>
+    <span style="color: orange; font-weight: bold;">
+        <%= @box %>        
+    </span>
+<% elsif (@box == "안녕") %>
+    <span style="color: green; font-weight: bold;">
+        <%= @box %>        
+    </span>
+    
+<% else %>
+    <%= @box %>
+<% end %>

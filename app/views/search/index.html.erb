@@ -1,0 +1,11 @@
+<div style="text-align: center;"><h1><%=@text %>검색결과</h1></div>
+
+<% if @search_result.exists? %>
+    <% @search_result.each do |t| %>
+    <h2><%link_to t.title, post_path(t.id) %></h2>
+    <div><%=t.content %></div>
+    <hr/>
+    <% end %>
+<% else %>
+ <h2>검색결과가 없습니다</h2>
+ <% end %>
